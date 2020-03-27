@@ -1,3 +1,12 @@
 body {
   color: inherit;
 }
+
+.humberger-menu span {
+  display: inline-block;
+  width: 100%;
+  background-color: #ccc;
+}
+.humberger-menu {
+  width: 10px;
+}

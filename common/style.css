@@ -1,19 +1,40 @@
 body {
   color: inherit;
 }
+ul {
+  list-style: none;
+}
+
 
 /* --ヘッダー-- */
 /* ヘッダートップ */
 header .header-top {
-  background-color: #000;
-}
-
-/* ハンバーガーメニュー */
-.humberger-menu span {
-  display: inline-block;
-  width: 100%;
   background-color: #ccc;
 }
-.humberger-menu {
-  width: 10px;
+header .header-top .global-navi ul li {
+  float: left;
+}
+header .header-top .global-navi ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header .header-top .header-logo{
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+header .header-top .global-navi {
+  float: right;
+}
+header .header-top:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header .header-top {
+  height: 60px;
+  vertical-align: center;
+  position: relative;
 }

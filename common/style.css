@@ -34,8 +34,9 @@ header .header-top .header-logo{
   top: 50%;
   transform: translate(0, -50%);
 }
-header .header-top .global-navi {
+header .header-top .navi-right {
   float: right;
+  padding: 17.5px 0 0;
 }
 header .header-top:after {
   content: "";
@@ -47,6 +48,50 @@ header .header-top {
   position: relative;
 }
 header .header-top .global-navi ul {
-  padding: 17.5px 0 0;
+  padding: 0;
   margin: 0;
+}
+header .header-top .navi-right .global-navi {
+  float: left;
+}
+header .header-top .navi-right .other-navi {
+  float: right;
+}
+header .header-top .navi-right:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header .header-top .navi-right .other-navi img {
+  padding-left: 40px;
+}
+
+/* ハンバーガーメニュー */
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 8px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
 }

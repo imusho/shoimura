@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
 
 body {
-  color: inherit;
-  font-family: 'Noto Sans JP', sans-serif;  
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 ul {
   list-style: none;
@@ -13,9 +13,15 @@ ul {
 /* ヘッダートップ */
 header .header-top {
   background-color: #ccc;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  line-height: 21px;
+  font-feature-settings: "palt";
 }
 header .header-top .global-navi ul li {
   float: left;
+  padding: 0 10px;
 }
 header .header-top .global-navi ul:after {
   content: "";
@@ -38,6 +44,9 @@ header .header-top:after {
 }
 header .header-top {
   height: 60px;
-  vertical-align: center;
   position: relative;
+}
+header .header-top .global-navi ul {
+  padding: 17.5px 0 0;
+  margin: 0;
 }

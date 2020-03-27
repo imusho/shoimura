@@ -2,6 +2,13 @@ body {
   color: inherit;
 }
 
+/* --ヘッダー-- */
+/* ヘッダートップ */
+header .header-top {
+  background-color: #000;
+}
+
+/* ハンバーガーメニュー */
 .humberger-menu span {
   display: inline-block;
   width: 100%;

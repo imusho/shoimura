@@ -14,22 +14,26 @@ ul {
 header .header-top {
   background-color: #ccc;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
   color: #000;
   line-height: 21px;
   font-feature-settings: "palt";
 }
 header .header-top .global-navi ul li {
   float: left;
-  padding: 0 10px;
+  margin: 0 10px;
 }
 header .header-top .global-navi ul li:last-child {
-  padding-right: 40px;
+  margin-right: 30px;
 }
 header .header-top .global-navi ul:after {
   content: "";
   clear: both;
   display: block;
+}
+header .header-top .global-navi ul li a {
+  text-decoration: none;
+  color: inherit;
 }
 header .header-top .header-logo{
   float: left;

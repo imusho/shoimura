@@ -12,12 +12,14 @@ ul {
 /* --ヘッダー-- */
 /* ヘッダートップ */
 header .header-top {
-  background-color: #ccc;
+  /* background-color: #ccc; */
   font-size: 14px;
   font-weight: bold;
   color: #000;
   line-height: 21px;
   font-feature-settings: "palt";
+  height: 60px;
+  position: relative;
 }
 header .header-top .global-navi ul li {
   float: left;
@@ -34,6 +36,12 @@ header .header-top .global-navi ul:after {
 header .header-top .global-navi ul li a {
   text-decoration: none;
   color: inherit;
+  display: block;
+  padding: 19.5px 0;
+}
+header .header-top .global-navi ul li a:hover {
+  color: #0c419a;
+  border-bottom: 2px solid #005BAC;
 }
 header .header-top .header-logo{
   float: left;
@@ -53,14 +61,9 @@ header .header-top:after {
   clear: both;
   display: block;
 }
-header .header-top {
-  height: 60px;
-  position: relative;
-}
 header .header-top .global-navi ul {
   padding: 0;
   margin: 0;
-  margin-top: 17.5px;
 }
 header .header-top .navi-right .global-navi {
   float: left;
@@ -83,13 +86,20 @@ header .header-top .navi-right .img-center {
   float: left;
 }
 header .header-top .navi-right .img-center img,
-header .header-top .navi-right .img-center a {
+header .header-top .navi-right .img-center .menu-trigger {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+header .header-top .navi-right .img-center .img-link {
+  width: 56px;
+  height: 60px;
+  display: block;
+}
+header .header-top .navi-right .img-center:hover {
+  opacity: 0.6;
+}
 
 /* ハンバーガーメニュー */
 .menu-trigger,

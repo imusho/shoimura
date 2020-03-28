@@ -8,6 +8,11 @@ body {
 ul {
   list-style: none;
 }
+/* リストの矢印 */
+.arrow::after {
+  content: ">";
+  color: #000;
+}
 
 
 /* --ヘッダー-- */
@@ -140,11 +145,32 @@ header .breadcrumb {
   text-decoration: none;
 }
 header .breadcrumb {
-  margin: 0 0 0 85px;
+  margin: 0 0 30px 85px;
 }
 
-/* リストの矢印 */
-.arrow::after {
-  content: ">";
-  color: #000;
+
+
+/* --ボディー-- */
+/* メインビジュアル */
+.maincontent .mainvisual img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.maincontent .mainvisual .mainvisual-text p {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #fff;
+}
+.maincontent .mainvisual .mainvisual-text h1 {
+  font-size: 28px;
+  color: #fff;
+}
+.maincontent .mainvisual .mainvisual-text {
+  position: absolute;
+  left: 220px;
+  top: 20px;
+}
+.maincontent .mainvisual {
+  position: relative;
 }

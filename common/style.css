@@ -149,8 +149,12 @@ header .breadcrumb {
 }
 
 
-
 /* --ボディー-- */
+.contentbody {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 /* メインビジュアル */
 .maincontent .mainvisual img {
   height: 250px;
@@ -173,4 +177,31 @@ header .breadcrumb {
 }
 .maincontent .mainvisual {
   position: relative;
+  margin-bottom: 30px;
+}
+
+/* snsシェアボタン */
+.maincontent .contentbody .share-btn a img {
+  width: 24px;
+  height: 24px;
+  vertical-align: bottom;
+}
+.maincontent .contentbody .share-btn::before {
+  content: "Share";
+  color: #666;
+  font-size: 12px;
+  font-family: arial;
+  font-weight: bold;
+}
+.maincontent .contentbody .share-btn a {
+  margin-left: 20px;
+}
+.maincontent .contentbody .content-right .share-btn {
+  position: absolute;
+  right: 0;
+}
+.maincontent .contentbody .content-right {
+  position: relative;
+  height: 24px;
+  margin: 0 100px;
 }

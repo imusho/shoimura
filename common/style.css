@@ -23,6 +23,9 @@ header .header-top .global-navi ul li {
   float: left;
   padding: 0 10px;
 }
+header .header-top .global-navi ul li:last-child {
+  padding-right: 40px;
+}
 header .header-top .global-navi ul:after {
   content: "";
   clear: both;
@@ -36,7 +39,6 @@ header .header-top .header-logo{
 }
 header .header-top .navi-right {
   float: right;
-  padding: 17.5px 0 0;
 }
 header .header-top:after {
   content: "";
@@ -50,33 +52,48 @@ header .header-top {
 header .header-top .global-navi ul {
   padding: 0;
   margin: 0;
+  margin-top: 17.5px;
 }
 header .header-top .navi-right .global-navi {
   float: left;
-}
-header .header-top .navi-right .other-navi {
-  float: right;
 }
 header .header-top .navi-right:after {
   content: "";
   clear: both;
   display: block;
 }
-header .header-top .navi-right .other-navi img {
-  padding-left: 40px;
+/* header .header-top .navi-right .other-navi img {
+  padding-left: 36px;
+} */
+/* header .header-top .navi-right .other-navi a {
+  margin: 0 20px 0 36px;
+} */
+header .header-top .navi-right .img-center {
+  width: 56px;
+  height: 60px;
+  position: relative;
+  float: left;
 }
+header .header-top .navi-right .img-center img,
+header .header-top .navi-right .img-center a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* ハンバーガーメニュー */
 .menu-trigger,
 .menu-trigger span {
   display: inline-block;
-  transition: all .4s;
+  /* transition: all .4s; */
   box-sizing: border-box;
 }
 .menu-trigger {
   position: relative;
   width: 20px;
-  height: 20px;
+  height: 19px;
 }
 .menu-trigger span {
   position: absolute;

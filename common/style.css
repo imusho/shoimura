@@ -314,6 +314,7 @@ header .breadcrumb {
 .maincontent .contentbody .article-body .nri-strongness {
   background-color: #DEECF8;
   padding: 30px 20px 40px 20px;
+  margin-bottom: 65px;
 }
 .maincontent .contentbody .article-body .nri-strongness .strongness-list p {
   background-color: #fff;

@@ -294,8 +294,44 @@ header .breadcrumb {
   padding-right: 5px;
 }
 
+/* NRIの強みのリンク */
+.maincontent .contentbody .article-body .nri-strongness .strongness-list a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.1875;
+  color: #0c419a;
+  font-weight: normal;
+}
+.maincontent .contentbody .article-body .nri-strongness p {
+  font-size: 16px;
+  line-height: 1.1875;
+  font-weight: bold;
+  margin-top: 0;
+}
+.maincontent .contentbody .article-body .nri-strongness {
+  background-color: #DEECF8;
+  padding: 30px 20px 40px 20px;
+}
+.maincontent .contentbody .article-body .nri-strongness .strongness-list p {
+  background-color: #fff;
+  width: 240px;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
 
-
-/* .maincontent .contentbody .article-body .link-prev-next .ta-left::before {
-  content: "<";
-} */
+  background-image: url(https://www.nri.com/static/common/images/icon-chevronRight.svg);
+  background-repeat: no-repeat;
+  background-size: 8px 10px;
+  background-position: 8px 50%;
+}
+.maincontent .contentbody .article-body .nri-strongness .strongness-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 140px;
+}

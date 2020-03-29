@@ -246,6 +246,7 @@ header .breadcrumb {
   height: 70px;
   margin-left: 252px;
   box-sizing: border-box;
+  margin-bottom: 90px;
 }
 .maincontent .contentbody .article-body .download-btn::after {
   content: "";
@@ -258,3 +259,43 @@ header .breadcrumb {
 .maincontent .contentbody .article-body .download-btn::before {
   content: ">";
 }
+
+/* 次の記事と前の記事へのリンク */
+.maincontent .contentbody .article-body .ta-left {
+  text-align: left;
+  float: left;
+  margin-top: 0;
+}
+.maincontent .contentbody .article-body .ta-right {
+  text-align: right;
+  float: right;
+  margin-top: 0;
+}
+.maincontent .contentbody .article-body .link-prev-next:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.maincontent .contentbody .article-body .ta-left a,
+.maincontent .contentbody .article-body .ta-right a {
+  text-decoration: none;
+  color: #0c419a;
+}
+.maincontent .contentbody .article-body .ta-left::before {
+  content: "<";
+}
+.maincontent .contentbody .article-body .ta-right::after {
+  content: ">";
+}
+.maincontent .contentbody .article-body .ta-left a {
+  padding-left: 5px;
+}
+.maincontent .contentbody .article-body .ta-right a {
+  padding-right: 5px;
+}
+
+
+
+/* .maincontent .contentbody .article-body .link-prev-next .ta-left::before {
+  content: "<";
+} */

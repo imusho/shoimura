@@ -432,3 +432,29 @@ header .breadcrumb {
 .maincontent .nri-links .follow-us .follow-us-content a:nth-of-type(3) {
   margin-right: 0;
 }
+
+/* nriリンク */
+.maincontent .nri-links .nri-detail-links ul li h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.maincontent .nri-links .nri-detail-links ul li {
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+.maincontent .nri-links .nri-detail-links ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.maincontent .nri-links .nri-detail-links ul {
+  padding: 0;
+  margin: 0;
+}
+.maincontent .nri-links .nri-detail-links {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -347,3 +347,57 @@ header .breadcrumb {
   background-color: #f4f4f4;
   transition: all 0.3s ease;
 }
+
+/* 企業情報リンク */
+.maincontent .contentbody .article-footer h2 {
+  font-size: 20px;
+  line-height: 38px;
+  margin-bottom: 25px;
+  margin-top: 125px;
+  padding-top: 20px;
+  border-top: 2px solid  #000;
+}
+.maincontent .contentbody .article-footer .company-links h3 {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.maincontent .contentbody .article-footer .company-links ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #0c419a;
+  padding-left: 15px;
+  display: block;
+}
+.maincontent .contentbody .article-footer .company-links ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.maincontent .contentbody .article-footer .company-links ul li {
+  width: 240px;
+  margin: 0 13.3px 20px 0 ;
+  background-image: url(https://www.nri.com/static/common/images/icon-chevronLeft.svg);
+  background-repeat: no-repeat;
+  background-size: 3px 10px;
+  background-position: 0 50%;
+}
+.maincontent .contentbody .article-footer .company-links ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.maincontent .contentbody .article-footer .company-links {
+  border-top: 1px dotted  #999;
+  padding-bottom: 10px;
+}
+.maincontent .contentbody .article-footer .company-links ul .prevpage a {
+  font-size: 16px;
+  line-height: 30px;
+}
+.maincontent .contentbody .article-footer .company-links ul .prevpage {
+  margin-top: 63px;
+  margin-bottom: 90px;
+}

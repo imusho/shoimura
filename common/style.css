@@ -415,6 +415,7 @@ header .breadcrumb {
 .maincontent .nri-links .follow-us .follow-us-content h2 {
   font-size: 20px;
   margin: 0;
+  font-family: 'HelveticaNeue', 'Noto Sans JP', sans-serif;
 }
 .maincontent .nri-links .follow-us .follow-us-content {
   display: -webkit-flex;

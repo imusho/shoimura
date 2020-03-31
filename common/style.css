@@ -470,8 +470,38 @@ header .breadcrumb {
 /* フッター */
 footer {
   border-top: 1px solid #ccc;
+  margin-top: 10px;
 }
 footer .footer-content {
   width: 1000px;
   margin: 0 auto;
+  padding: 50px 0 115px 0;
+}
+footer .footer-content .agreement-link p a {
+  text-decoration: none;
+  color: #999;
+  font-size: 12px;
+  display: block;
+}
+footer .footer-content small {
+  font-size: 10px;
+  line-height: 19px;
+  font-family: 'HelveticaNeue', 'Noto Sans JP', sans-serif;
+}
+footer .footer-content .agreement-link {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+footer .footer-content .agreement-link p {
+  padding: 0 18px;
+  border-right: 1px solid #999;
+  line-height: 1;
+}
+footer .footer-content .agreement-link p:first-child {
+  padding-left: 0;
+}
+footer .footer-content .agreement-link p:last-child {
+  padding-right: 0;
+  border-right: none;
 }

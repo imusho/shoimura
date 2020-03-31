@@ -25,7 +25,9 @@ header .header-top {
   line-height: 21px;
   font-feature-settings: "palt";
   height: 60px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 header .header-top .global-navi ul li {
   float: left;
@@ -146,6 +148,7 @@ header .breadcrumb {
 }
 header .breadcrumb {
   margin: 0 0 30px 85px;
+  padding-top: 60px;
 }
 
 

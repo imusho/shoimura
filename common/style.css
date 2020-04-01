@@ -10,7 +10,13 @@ ul {
 }
 /* リストの矢印 */
 .arrow::after {
-  content: ">";
+  content: "";
+  background-image: url(https://www.nri.com/static/common/images/icon-chevronRight.svg);
+  width: 8px;
+  height: 10px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 2.5px 50%;
   color: #000;
 }
 

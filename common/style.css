@@ -257,6 +257,10 @@ header .breadcrumb {
   box-sizing: border-box;
   margin-bottom: 90px;
 }
+.maincontent .contentbody .article-body .download-btn:hover {
+  background-color: #407cbe;
+  transition: all 0.2s ease;
+}
 .maincontent .contentbody .article-body .download-btn::after {
   content: "";
   display: inline-block;

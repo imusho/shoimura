@@ -462,6 +462,9 @@ header .breadcrumb {
   color: inherit;
   padding-left: 15px;
 }
+.maincontent .nri-links .nri-detail-links ul li a:hover {
+  text-decoration: underline;
+}
 .maincontent .nri-links .nri-detail-links ul {
   padding: 0;
   margin: 0;
@@ -492,6 +495,9 @@ footer .footer-content .agreement-link p a {
   color: #999;
   font-size: 12px;
   display: block;
+}
+footer .footer-content .agreement-link p a:hover {
+  text-decoration: underline;
 }
 footer .footer-content small {
   font-size: 10px;

@@ -201,9 +201,13 @@ header .breadcrumb {
   font-size: 12px;
   font-family: arial;
   font-weight: bold;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  display: inline-block;
 }
 .maincontent .contentbody .share-btn a {
   margin-left: 20px;
+  display: inline-block;
 }
 .maincontent .contentbody .content-right .share-btn {
   position: absolute;

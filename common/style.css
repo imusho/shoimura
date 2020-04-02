@@ -256,6 +256,7 @@ header .breadcrumb {
   margin-left: 252px;
   box-sizing: border-box;
   margin-bottom: 90px;
+  position: relative;
 }
 .maincontent .contentbody .article-body .download-btn:hover {
   background-color: #407cbe;
@@ -270,7 +271,16 @@ header .breadcrumb {
   margin-left: 10px;
 }
 .maincontent .contentbody .article-body .download-btn::before {
-  content: ">";
+  content: "";
+  width: 5px;
+  height: 10px;
+  background-size: contain;
+  background-image: url(images/maincontent/right-arrow-white.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 10px;
 }
 
 /* 次の記事と前の記事へのリンク */

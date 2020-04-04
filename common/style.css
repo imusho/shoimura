@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'AxisStd-Light';
+  src: url('font/ca94208f-21dd-4dc8-ab7c-057d8dbfcccb.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'AxisStd-Regular';
+  src: url('font/d226afef-6536-4b18-9b28-defffcc4baae.woff2') format('woff2');
+}
+
 /* 共通部分 */
 body {
   color: #272727;
+  font-family: 'AxisStd-Light', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 a {
   text-decoration: none;

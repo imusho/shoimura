@@ -42,3 +42,7 @@ h5 {
   font-size: 20px;
   line-height: 28px;
 }
+.content-inner {
+  width: 1040px;
+  margin: 0 auto;
+}

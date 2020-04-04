@@ -46,6 +46,9 @@ h5 {
   width: 1040px;
   margin: 0 auto;
 }
+h1, h2, h3, h4, h5 {
+  font-family: 'AxisStd-Regular', sans-serif;
+}
 
 /* ---ヘッダー--- */
 /* トップナビ */

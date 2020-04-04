@@ -52,3 +52,37 @@ h1, h2, h3, h4, h5 {
 
 /* ---ヘッダー--- */
 /* トップナビ */
+header .top-navi {
+  background-color: #f7f7f7;
+}
+header .top-navi p,
+header .top-navi ul li a {
+  font-size: 11px;
+  line-height: 15px;
+  font-family: 'AxisStd-Regular', sans-serif;
+}
+header .top-navi ul li a {
+  color: #676767;
+  display: block;
+  padding: 0 10px;
+  border-right: 1px solid #676767;
+}
+header .top-navi ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0;
+}
+header .top-navi ul li .br-none {
+  border-right: none;
+}
+header .top-navi .content-inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 7.5px 0;
+}
+header .top-navi p {
+  margin: 0;
+}

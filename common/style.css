@@ -67,6 +67,9 @@ header .top-navi ul li a {
   padding: 0 10px;
   border-right: 1px solid #676767;
 }
+header .top-navi ul li a:hover {
+  text-decoration: underline;
+}
 header .top-navi ul {
   display: -webkit-flex;
   display: -ms-flex;
@@ -81,8 +84,24 @@ header .top-navi .content-inner {
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
-  padding: 7.5px 0;
 }
 header .top-navi p {
-  margin: 0;
+  margin: 8.5px 0;
+}
+header .top-navi ul li {
+  padding: 8.5px 0;
+}
+header .top-navi ul .st-login {
+  background-color: #d9d9d9;
+  background-image: url(img/icon_site_mark01.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 10px 15px;
+  background-size: 16px 20px;
+  background-position: 8px 50%;
+  padding: 0;
+}
+header .top-navi ul li .st-login-a {
+  color: #006;
+  display: block;
+  padding: 8.5px 10px 8.5px 30px;
 }

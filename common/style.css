@@ -479,6 +479,7 @@ header .breadcrumb {
   text-decoration: none;
   color: inherit;
   padding-left: 15px;
+  display: block;
 }
 .maincontent .nri-links .nri-detail-links ul li a:hover {
   text-decoration: underline;
@@ -493,6 +494,8 @@ header .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 1260px;
+  margin: 0 auto;
 }
 .maincontent .nri-links .nri-detail-links section {
   margin: 30px 0;

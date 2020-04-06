@@ -107,3 +107,16 @@ header .top-navi ul li .st-login-a {
 }
 
 /* グローバルナビ */
+header .global-navi .global-navi-logo img {
+  width: 211px;
+  height: 45px;
+}
+header .global-navi ul,
+header .global-navi .global-navi-menu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+header .global-navi .global-navi-menu {
+  justify-content: space-between;
+}

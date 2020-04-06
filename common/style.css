@@ -119,4 +119,34 @@ header .global-navi .global-navi-menu {
 }
 header .global-navi .global-navi-menu {
   justify-content: space-between;
+  font-size: 15px;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li {
+  line-height: 17px;
+  font-family: 'AxisStd-Regular', sans-serif;
+  color: #1f286f;
+  text-align: center;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li a {
+  color: #272727;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li span {
+  background-image: url(img/global_nav_btn01_01.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 10px;
+  display: inline-block;
+  background-position: 50% 100%;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-net-cource {
+  background-image: url(img/global_nav_btn01_02.png);
+  background-position: 50% 0%;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-commute-cource {
+  background-image: url(img/global_nav_btn01_03.png);
+  background-position: 50% 0%;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-alliance-school {
+  background-image: url(img/global_nav_btn01_04.png);
+  background-position: 50% 0%;
 }

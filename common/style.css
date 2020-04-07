@@ -116,37 +116,88 @@ header .global-navi .global-navi-menu {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  align-items: center;
 }
 header .global-navi .global-navi-menu {
   justify-content: space-between;
   font-size: 15px;
+  margin: 25px 0;
 }
 header .global-navi .global-navi-menu .global-navi-leftmenu li {
   line-height: 17px;
   font-family: 'AxisStd-Regular', sans-serif;
   color: #1f286f;
   text-align: center;
+  letter-spacing: 3px;
+  border-left: 1px solid #dcdddd;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li:last-child {
+  border-right: 1px solid #dcdddd;
 }
 header .global-navi .global-navi-menu .global-navi-leftmenu li a {
   color: #272727;
+  width: 160px;
+  display: inline-block;
 }
-header .global-navi .global-navi-menu .global-navi-leftmenu li span {
+header .global-navi .global-navi-menu .global-navi-leftmenu .gn-about-school-li::after {
+  content: "";
   background-image: url(img/global_nav_btn01_01.png);
   background-repeat: no-repeat;
-  width: 100px;
   height: 10px;
-  display: inline-block;
+  display: block;
+  background-position: 50% 100%;
+  margin-top: 3px;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li a::after {
+  content: "";
+  background-image: url(img/global_nav_btn01_02.png);
+  background-repeat: no-repeat;
+  height: 10px;
+  display: block;
+  background-position: 50% 0%;
+  margin-top: 3px;
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-commute-cource::after {
+  background-image: url(img/global_nav_btn01_03.png);
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-alliance-school::after {
+  background-image: url(img/global_nav_btn01_04.png);
+}
+header .global-navi .global-navi-menu .global-navi-leftmenu li a:hover::after {
   background-position: 50% 100%;
 }
-header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-net-cource {
-  background-image: url(img/global_nav_btn01_02.png);
-  background-position: 50% 0%;
+header .global-navi .global-navi-menu .global-navi-leftmenu li a:hover {
+  color: #1f286f;
 }
-header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-commute-cource {
-  background-image: url(img/global_nav_btn01_03.png);
-  background-position: 50% 0%;
+header .global-navi .global-navi-menu .global-navi-leftmenu .gn-about-school-li {
+  padding: 0 27px;
 }
-header .global-navi .global-navi-menu .global-navi-leftmenu li .gn-alliance-school {
-  background-image: url(img/global_nav_btn01_04.png);
-  background-position: 50% 0%;
+header .global-navi .global-navi-menu .global-navi-leftmenu,
+header .global-navi .global-navi-menu .global-navi-rightmenu {
+  padding: 0;
+  margin: 0;
+}
+/* グローバルナビ右側 */
+header .global-navi .global-navi-menu .global-navi-rightmenu li {
+  border: 1px solid  #040066;
+  margin-left: 10px;
+  text-align: center;
+}
+header .global-navi .global-navi-menu .global-navi-rightmenu li a {
+  font-family: 'AxisStd-Regular', sans-serif;
+  color: #1F286F;
+  display: block;
+  padding: 10.5px 0;
+  width: 170px;
+  background-image: url(img/icon_arrow01_right_blue01.png);
+  background-repeat: no-repeat;
+  background-position: 93% 50%;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+}
+header .global-navi .global-navi-menu .global-navi-rightmenu li a:hover {
+  color: #fff;
+  background-color: #1F286F;
+  background-image: url(img/icon_arrow01_right_white01.png);
+  transition: all 0.1s ease;
 }

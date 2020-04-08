@@ -239,3 +239,56 @@ header .global-navi .contact {
 header .global-navi .content-inner {
   position: relative;
 }
+
+/* グローバルナビサブメニュー */
+header .global-navi-sub ul li a {
+  padding: 7px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+header .global-navi-sub ul li a:hover {
+  color: #1f286f;
+  background-color: #fff;
+  transition: all 0.1s ease;
+}
+header .global-navi-sub ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+header .global-navi-sub {
+  background-color: #181735;
+
+}
+header .global-navi-sub ul li {
+  padding: 0 5px 0 20px;
+  background-image: url(img/icon_backslash01_black01.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+header .global-navi-sub ul li:first-child {
+  background-image: none;
+  padding-left: 0;
+}
+header .global-navi-sub ul li:first-child {
+  background-image: none;
+}
+header .global-navi-sub .content-inner {
+  padding: 12px 0 10px 0;
+  position: relative;
+}
+header .global-navi-sub .content-inner::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 7%;
+  border: 5px solid transparent;
+  border-bottom: 7px solid #181735;
+}

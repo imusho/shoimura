@@ -14,6 +14,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 li {
   list-style: none;
@@ -296,8 +297,9 @@ header .global-navi-sub .content-inner::before {
   border-bottom: 7px solid #181735;
 }
 
-/* --記事本文-- */
-/* ヘッダー */
+/* ----記事本文---- */
+/* --ヘッダー-- */
+/* メインビジュアル */
 article header .main-visual h1 {
   text-align: center;
   font-size: 52px;
@@ -338,4 +340,22 @@ article header .main-visual h1::after {
   left: 50%;
   transform: translateX(-50%);
   bottom: -40px;
+}
+/* パンくず */
+article header .content-inner p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  padding: 20px 0;
+  letter-spacing: 1px;
+}
+article header .content-inner p a {
+  color: #36538d;
+}
+article header .content-inner p span::before {
+  content: ">";
+  margin: 0 5px;
+}
+article header {
+  border-bottom: 1px solid  #E1E1E1;
 }

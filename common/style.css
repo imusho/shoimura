@@ -295,3 +295,47 @@ header .global-navi-sub .content-inner::before {
   border: 5px solid transparent;
   border-bottom: 7px solid #181735;
 }
+
+/* --記事本文-- */
+/* ヘッダー */
+article header .main-visual h1 {
+  text-align: center;
+  font-size: 52px;
+  line-height: 94px;
+  font-family: 'AxisStd-Light', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 20px;
+  margin: 0;
+  color: #fff;
+  position: relative;
+  padding-top: 50px;
+}
+article header .main-visual {
+  height: 530px;
+  background-image: url(img/article/about_mainimage01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -30px;
+}
+article header .main-visual h1::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+article header .main-visual h1::after {
+  content: "";
+  background-image: url(img/article/about_maintitle_ruby01.png);
+  display: inline-block;
+  width: 94px;
+  height: 13px;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+}

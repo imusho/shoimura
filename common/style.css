@@ -298,6 +298,21 @@ header .global-navi-sub .content-inner::before {
 }
 
 /* ----記事本文---- */
+/* 共通 */
+.h-underline {
+  position: relative;
+}
+.h-underline::after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: #000;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
 /* --ヘッダー-- */
 /* メインビジュアル */
 article header .main-visual h1 {
@@ -358,4 +373,65 @@ article header .content-inner p span::before {
 }
 article header {
   border-bottom: 1px solid  #E1E1E1;
+}
+
+/* --方針-- */
+/* 共通 */
+.w-underline {
+  background-image: url(img/article/line02_black01.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10px 0;
+}
+.content-lr {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+/* メインメッセージ */
+article .about-school .main-message {
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+article .about-school .main-message h2 {
+  font-family: 'AxisStd-Light', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 10px;
+  margin: 0 0 70px 0;
+}
+article .about-school .main-message p {
+  width: 620px;
+  text-align: left;
+  margin: 0 auto;
+}
+article .about-school .main-message h4 {
+  padding-bottom: 20px;
+  margin-top: 0;
+}
+/* 教育方針 */
+article .about-school .school-policy .policy-wrapper .policy-text {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+article .about-school .school-policy .policy-wrapper .policy-text h4 {
+  padding: 7px 15px 7px 0;
+  margin: 0;
+  width: 82px;
+  box-sizing: border-box;
+  text-align-last: justify;
+  border-right: 1px solid #000;
+}
+article .about-school .school-policy .policy-wrapper .policy-text p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 34px;
+  padding-left: 15px;
+}
+article .about-school .school-policy img {
+  width: 338px;
+  height: 293px;
+  object-fit: cover;
 }

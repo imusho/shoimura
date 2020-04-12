@@ -510,3 +510,59 @@ article .about-school .school-charm .flexibletime .flexibletime-text span {
 article .about-school .school-charm section {
   margin-bottom: 80px;
 }
+/* 詳細共通 */
+article .detail:nth-child(odd) {
+  background-color: #F7F7F7;
+  border: solid  #E2E2E2;
+  border-width: 1px 0;
+}
+article .detail .detail-content-wrapper .detail-text {
+  width: 285px;
+}
+article .detail .detail-content-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0 110px 0;
+}
+article .detail .detail-content-wrapper:nth-child(odd) .detail-text {
+  order: 2;
+}
+article .detail .content-inner > h2,
+article .detail .content-inner > p {
+  text-align: center;
+}
+article .detail .content-inner > h2 {
+  padding-bottom: 12px;
+  margin: 0;
+}
+article .detail {
+  padding-top: 70px;
+}
+article .detail .detail-content-wrapper .detail-text h4{
+  margin: 0 0 15px 0;
+}
+article .detail .detail-content-wrapper .detail-text p {
+  margin: 0 0 35px 0;
+}
+.readmore-img {
+  width: 70px;
+  padding-left: 5px;
+}
+.readmore-span {
+  background-image: url(img/article/icon_arrow01_right_black01.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+  background-position: 0 50%;
+  width: 9px;
+  height: 16px;
+}
+article .detail .detail-content-wrapper .detail-text a:hover {
+  opacity: 0.5;
+}
+article .detail .detail-content-wrapper .detail-text a {
+  display: block;
+}

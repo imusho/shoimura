@@ -600,6 +600,10 @@ article .nkou-banner {
 article .nkou-banner img {
   vertical-align: middle;
 }
+article .nkou-banner:hover {
+  opacity: 0.7;
+  transition: all 0.1s ease;
+}
 /* メッセージリンク */
 article .voice-links a h3 {
   font-size: 25px;

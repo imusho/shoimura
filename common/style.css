@@ -604,6 +604,7 @@ article .nkou-banner img {
 article .voice-links a h3 {
   font-size: 25px;
   line-height: 45px;
+  font-family: 'AxisStd-Light', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 article .voice-links a p {
   font-size: 13px;
@@ -612,11 +613,14 @@ article .voice-links a p {
 article .voice-links a p,
 article .voice-links a h3 {
   margin: 0;
+  letter-spacing: 0.6px;
 }
 article .voice-links a {
   display: block;
-  padding: 15px 30px;
+  padding: 8px 42px 8px 30px;
   background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
 }
 article .voice-links .bg-border {
   width: 490px;
@@ -640,4 +644,32 @@ article .voice-links .content-inner .flexbox-wrapper {
 }
 article .voice-links .content-inner .voice-links-top {
   margin-bottom: 30px;
+}
+article .voice-links .content-inner .voice-links-top a {
+  height: 129px;
+}
+article .voice-links .content-inner .voice-links-top .voice-links-01 {
+  margin-top: 22.5px;
+}
+article .voice-links .content-inner .voice-links-bottom a {
+  height: 107px;
+}
+article .voice-links .content-inner .voice-links-bottom .voice-links-03 {
+  margin-top: 11.5px;
+}
+article .voice-links a::after {
+  content: "";
+  background-image: url(img/article/icon_arrow01_right_black01.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+  width: 9px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+article .voice-links a:hover {
+  opacity: 0.7;
 }

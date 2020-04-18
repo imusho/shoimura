@@ -591,3 +591,53 @@ article .detail .detail-content-wrapper .detail-text a .detail-subtext_02 {
   line-height: 23px;
   margin-bottom: 20px;
 }
+/* 5分でわかるN高へのリンク */
+article .nkou-banner {
+  display: block;
+  width: 1060px;
+  margin: 200px auto 100px auto;
+}
+article .nkou-banner img {
+  vertical-align: middle;
+}
+/* メッセージリンク */
+article .voice-links a h3 {
+  font-size: 25px;
+  line-height: 45px;
+}
+article .voice-links a p {
+  font-size: 13px;
+  line-height: 23px;
+}
+article .voice-links a p,
+article .voice-links a h3 {
+  margin: 0;
+}
+article .voice-links a {
+  display: block;
+  padding: 15px 30px;
+  background-color: #fff;
+}
+article .voice-links .bg-border {
+  width: 490px;
+  background-image: url(img/article/bg_diagonal01_black01.png);
+  padding: 7px;
+  box-sizing: border-box;
+}
+article .voice-links {
+  background-color: #F7F7F7;
+  border: solid  #E2E2E2;
+  border-width: 1px 0;
+}
+article .voice-links .content-inner {
+  padding: 70px 0;
+}
+article .voice-links .content-inner .flexbox-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+article .voice-links .content-inner .voice-links-top {
+  margin-bottom: 30px;
+}

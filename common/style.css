@@ -181,8 +181,11 @@ header .breadcrumb {
 }
 .maincontent .mainvisual .mainvisual-text {
   position: absolute;
-  left: 220px;
+  left: 0px;
+  right: 0px;
   top: 20px;
+  margin: auto;
+  max-width: 1000px;
 }
 .maincontent .mainvisual {
   position: relative;

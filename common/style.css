@@ -690,3 +690,97 @@ article .movie-links .content-inner {
   margin-top: 70px;
   margin-bottom: 210px;
 }
+/* 本文下部のリンク */
+article aside .bottom-contact a,
+article aside .bottom-contact p {
+  font-family: 'AxisStd-Regular', sans-serif;
+}
+article aside .bottom-contact a {
+  display: block;
+}
+article aside .bottom-contact {
+  background-image: url(img/aside/footer02_bg01.png);
+  padding: 35px 0;
+}
+article aside .bottom-contact > p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 4px;
+  color: #fff;
+  margin: 0 0 30px 0;
+}
+article aside .bottom-contact .bottom-leftcontact ul,
+article aside .bottom-contact .bottom-leftcontact ul li {
+  padding: 0;
+  margin: 0;
+}
+article aside .bottom-contact .bottom-leftcontact ul li:first-child {
+  margin-bottom: 15px;
+}
+article aside .bottom-contact .bottom-leftcontact ul li a {
+  font-size: 18px;
+  line-height: 25px;
+  padding: 15px 0 15px 60px;
+}
+article aside .bottom-contact .bottom-leftcontact ul li {
+  width: 258px;
+  background-color: #fff;
+  background-image: url(img/article/icon_arrow01_right_black01.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 14px;
+  background-size: auto 14px;
+  background-position: 95% 50%;
+}
+article aside .bottom-contact .bottom-leftcontact ul li a {
+  background-image: url(img/aside/icon_book01_black01.png);
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: 16px 50%;
+}
+article aside .bottom-contact .bottom-leftcontact ul li .link-meeting {
+  background-image: url(img/aside/icon_balloon01_black01.png);
+}
+article aside .bottom-contact .bottom-rightcontact a,
+article aside .bottom-contact .bottom-rightcontact p {
+  color: #fff;
+}
+article aside .bottom-contact .bottom-rightcontact a img {
+  height: 30px;
+  vertical-align: middle;
+}
+article aside .bottom-contact .bottom-rightcontact p {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  text-align: right;
+  padding-right: 23px;
+  padding: 8px 23px 0 0;
+}
+article aside .bottom-contact .bottom-rightcontact {
+  width: 265.625px;
+}
+article aside .bottom-contact .bottom-rightcontact .phone-number_02 {
+  margin: 10px 0 19px 0;
+}
+article aside .bottom-contact .bottom-rightcontact > a {
+  padding: 10px 40px 10px 35px;
+  border: 1px solid #fff;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 55.105px;
+  background-image: url(img/icon_arrow01_right_white01.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+  background-position: 93% 50%;
+}
+article aside .bottom-contact .center-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+  margin: 0 auto;
+}

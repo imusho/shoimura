@@ -694,7 +694,7 @@ article .movie-links .content-inner {
   margin-top: 70px;
   margin-bottom: 210px;
 }
-/* 本文下部のリンク */
+/* 本文下部のコンタクトリンク */
 article aside .bottom-contact a,
 article aside .bottom-contact p {
   font-family: 'AxisStd-Regular', sans-serif;
@@ -792,4 +792,91 @@ article aside .bottom-contact .center-wrapper {
   justify-content: space-between;
   width: 550px;
   margin: 0 auto;
+}
+/* ニュース・ブログリンクボタン */
+article aside .newsblog-btn a {
+  padding: 5px 0;
+  text-align: center;
+  font-family: 'AxisStd-Regular', sans-serif;
+  border: 1px solid #000;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 28px;
+  background-image: url(img/article/icon_arrow01_right_black01.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+  background-position: 93% 50%;
+  width: 258px;
+  box-sizing: border-box;
+}
+article aside .newsblog-btn {
+  width: 550px;
+  margin: 40px auto;
+}
+article aside .newsblog-btn a:last-child {
+  margin-left: 29px;
+}
+article aside .newsblog-btn a:hover {
+  background-color: #000;
+  background-image: url(img/icon_arrow01_right_white01.png);
+  color: #fff;
+  transition: all 0.1s ease;
+}
+/* 他の学校紹介リンク */
+article aside .nkou-other-school {
+  border-top: 1px solid  #E1E1E1;
+  padding: 40px 15px 70px 15px;
+  box-sizing: border-box;
+}
+article aside .nkou-other-school p {
+  margin: 0;
+}
+article aside .nkou-other-school > p {
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'AxisStd-Regular', sans-serif;
+}
+article aside .nkou-other-school .bg-border a p {
+  font-size: 13px;
+  line-height: 18px;
+}
+article aside .nkou-other-school .bg-border .n-junior-link img {
+  height: 35px;
+  margin-bottom: 7px;
+}
+article aside .nkou-other-school .bg-border .n-junior-link {
+  padding: 13px 0 15px 0;
+}
+article aside .nkou-other-school .bg-border .n-code-labo-link img {
+  height: 45px;
+}
+article aside .nkou-other-school .bg-border .n-code-labo-link {
+  padding: 10px 0 15px 0;
+}
+article aside .nkou-other-school .bg-border {
+  width: 490px;
+  background-image: url(img/article/bg_diagonal01_black01.png);
+  padding: 7px;
+  box-sizing: border-box;
+}
+article aside .nkou-other-school .bg-border a {
+  background-color: #fff;
+  display: block;
+  text-align: center;
+  background-image: url(img/article/icon_arrow01_right_black01.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 9px;
+  background-size: auto 9px;
+  background-position: 95% 50%;
+}
+article aside .nkou-other-school .bg-border a:hover {
+  opacity: 0.7;
+}
+article aside .nkou-other-school .flex-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
 }

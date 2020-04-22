@@ -880,3 +880,161 @@ article aside .nkou-other-school .flex-wrapper {
   display: flex;
   justify-content: space-between;
 }
+
+/* --本文フッター-- */
+/* 共通 */
+article footer .content-inner {
+  padding: 35px 0 30px;
+}
+article footer .content-inner > div {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+article footer {
+  background-color: #F8F8F8;
+}
+article footer ul {
+  margin: 0;
+  padding: 0;
+}
+article footer .content-inner a:hover {
+  text-decoration: underline;
+}
+article footer ul a {
+  letter-spacing: 0.6px;
+}
+/* リンク上段 */
+article footer .content-inner .footerlink-top {
+  margin-bottom: 40px;
+}
+article footer .content-inner .footerlink-top ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+article footer .content-inner .footerlink-top {
+  align-items: center;
+}
+article footer .content-inner .footerlink-top ul {
+  height: 16px;
+}
+article footer .content-inner .footerlink-top ul li {
+  padding: 0 12px;
+  border-left: 1px solid  #999CBB;
+}
+article footer .content-inner .footerlink-top ul li a {
+  line-height: 16px;
+  color: #006;
+  font-family: 'AxisStd-Regular', sans-serif;
+}
+article footer .content-inner .footerlink-top ul li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+article footer .content-inner .footerlink-top > a {
+  margin-right: 50px;
+}
+article footer .content-inner .footerlink-top > a:hover {
+  opacity: 0.7;
+}
+/* リンク中段 */
+article footer .content-inner .footerlink-middle {
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid  #C9C9C9;
+}
+article footer .content-inner .footerlink-middle ul li a {
+  font-size: 14px;
+  line-height: 20px;
+}
+article footer .content-inner .footerlink-middle ul li {
+  margin-bottom: 10px;
+}
+article footer .content-inner .footerlink-middle ul {
+  width: 25%;
+  margin-right: 20px;
+}
+article footer .content-inner .footerlink-middle ul:last-child {
+  margin-right: 0;
+}
+article footer .content-inner .footerlink-middle ul li .footerlink-style_01 {
+  font-size: 16px;
+  line-height: 22px;
+  color: #006;
+  font-family: 'AxisStd-Regular', sans-serif;
+}
+article footer .content-inner .footerlink-middle ul li .advanced-program::before {
+  content: "アドバンスト プログラム";
+  font-size: 11px;
+  line-height: 15px;
+  position: absolute;
+  top: -15px;
+}
+article footer .content-inner .footerlink-middle ul li .advanced-program:hover::before {
+  text-decoration: underline;
+}
+article footer .content-inner .footerlink-middle ul li .advanced-program {
+  position: relative;
+}
+article footer .content-inner .footerlink-middle ul .footerlink-style_02 {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid  #C9C9C9;
+}
+/* リンク下段 */
+article footer .content-inner .footerlink-bottom ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-left li a {
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 15px;
+  display: block;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a img {
+  height: 27px;
+  float: left;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a p {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  padding-left: 5px;
+  float: right;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a {
+  display: block;
+  padding: 10px 28px 10px 10px;
+  position: relative;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li {
+  border-right: 1px solid #DDDDDD;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li:last-child {
+  border-right: 0;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a:hover {
+  background-color: #EBEBEB;
+  transition: all 0.1s ease;
+}
+article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a::before {
+  content: "＞";
+  color: #aaa;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 8px;
+}
+article footer .content-inner .footerlink-bottom {
+  align-items: center;
+}

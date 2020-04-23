@@ -591,6 +591,9 @@ article .detail .detail-content-wrapper .detail-text a .detail-subtext_02 {
   line-height: 23px;
   margin-bottom: 20px;
 }
+article .detail .detail-content-wrapper .newbiz-club-img {
+  width: 720px;
+}
 /* 5分でわかるN高へのリンク */
 article .nkou-banner {
   display: block;

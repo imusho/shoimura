@@ -692,11 +692,13 @@ article .movie-links .movie-wrapper p {
 }
 article .movie-links .movie-wrapper iframe {
   vertical-align: middle;
+  border: 0;
 }
 article .movie-links .content-inner {
   margin-top: 70px;
   margin-bottom: 210px;
 }
+
 /* 本文下部のコンタクトリンク */
 article aside .bottom-contact a,
 article aside .bottom-contact p {

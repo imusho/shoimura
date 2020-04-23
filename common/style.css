@@ -1038,3 +1038,27 @@ article footer .content-inner .footerlink-bottom .footerlink-bottom-right li a::
 article footer .content-inner .footerlink-bottom {
   align-items: center;
 }
+
+/* フッター */
+.last-footer {
+  background-color: #000;
+  font-size: 11px;
+  line-height: 15px;
+  color: #999;
+}
+.last-footer p {
+  font-size: 11px;
+  line-height: 15px;
+  color: #999;
+  margin: 20px 0;
+}
+.last-footer .content-inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.last-footer a:hover {
+  text-decoration: underline;
+}

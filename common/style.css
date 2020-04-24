@@ -419,9 +419,7 @@ article .about-school .school-policy .policy-wrapper .policy-text {
 article .about-school .school-policy .policy-wrapper .policy-text h4 {
   padding: 7px 15px 7px 0;
   margin: 0;
-  width: 82px;
   box-sizing: border-box;
-  text-align-last: justify;
   border-right: 1px solid #000;
 }
 article .about-school .school-policy .policy-wrapper .policy-text p {

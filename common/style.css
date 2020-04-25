@@ -404,7 +404,9 @@ article .about-school .main-message p {
   text-align: left;
   margin: 0 auto;
 }
-article .about-school .main-message h4 {
+article .about-school .main-message h3 {
+  font-size: 22px;
+  line-height: 40px;
   padding-bottom: 20px;
   margin-top: 0;
 }
@@ -538,8 +540,10 @@ article .detail .content-inner > h2 {
 article .detail {
   padding-top: 70px;
 }
-article .detail .detail-content-wrapper .detail-text h4{
+article .detail .detail-content-wrapper .detail-text h3{
   margin: 0 0 15px 0;
+  font-size: 22px;
+  line-height: 40px;
 }
 article .detail .detail-content-wrapper .detail-text p {
   margin: 0 0 35px 0;

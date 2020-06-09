@@ -84,6 +84,7 @@ function makeLink($value) {
 	<title>ひとこと掲示板</title>
 
 	<link rel="stylesheet" href="style.css" />
+	<script src="https://kit.fontawesome.com/88931390c8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -114,7 +115,25 @@ function makeLink($value) {
 				<img src="member_picture/<?php echo h($post['picture']) ?>" alt="<?php echo h($post['name']) ?>のイメージ" width="48" height="48">
 				<p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
 				[<a href="index.php?res=<?php echo h($post['id']) ?>">Re</a>]</p>
-				<p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
+				<p class="day">
+
+					<!-- いいねボタン -->
+					<?php
+					$likeChecks = $db->prepare('SELECT delete_flg FROM likes WHERE lile_post_id=? AND like_member_id =?');
+					$likeChecks->execute(array(
+						$post['id'],
+						$member['id']
+					));
+					$likeCheck = $likeChecks->fetch();
+
+					if ($likeCheck['delete_flg'] = 0):
+					 ?>
+				 	<a href="like_do.php?delete=1&like_post_id=<?php echo h($post['id']); ?>"><i class="fas fa-heart like-btn"></i></a>
+					<?php else: ?>
+					<a href="like_do.php?delete=0&like_post_id=<?php echo h($post['id']); ?>"><i class="far fa-heart"></i></a>
+					<?php endif; ?>
+
+					<a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
 				<?php if ($post['reply_post_id'] > 0): ?>
 					<a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
 				<?php endif; ?>

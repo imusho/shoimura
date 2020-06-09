@@ -143,3 +143,8 @@ li {
 	font-size: 80%;
 	color: #999;
 }
+
+/* いいね機能 */
+.like-btn {
+	color: #CF3A60;
+}

@@ -119,6 +119,7 @@ function makeLink($value) {
 
 					<!-- いいねボタン -->
 					<?php
+					//いいねステータスチェック用のデータ取得
 					$likeChecks = $db->prepare('SELECT delete_flg FROM likes WHERE like_post_id=? AND like_member_id =?');
 					$likeChecks->execute(array(
 						$post['id'],
@@ -126,10 +127,17 @@ function makeLink($value) {
 					));
 					$likeCheck = $likeChecks->fetch();
 					 ?>
+
 					<a href="like_do.php?like_post_id=<?php echo h($post['id']); ?>">
-					<?php if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1): ?>
+					<?php
+					//未いいねの場合の分岐
+					if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1):
+					 ?>
 						<i class="far fa-heart"></i></a>
-					<?php else: ?>
+					<?php
+					//いいね済の場合の分岐
+					else:
+					 ?>
 						<i class="fas fa-heart like-btn"></i></a>
 					<?php endif; ?>
 

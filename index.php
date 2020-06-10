@@ -119,18 +119,18 @@ function makeLink($value) {
 
 					<!-- いいねボタン -->
 					<?php
-					$likeChecks = $db->prepare('SELECT delete_flg FROM likes WHERE lile_post_id=? AND like_member_id =?');
+					$likeChecks = $db->prepare('SELECT delete_flg FROM likes WHERE like_post_id=? AND like_member_id =?');
 					$likeChecks->execute(array(
 						$post['id'],
 						$member['id']
 					));
 					$likeCheck = $likeChecks->fetch();
-
-					if ($likeCheck['delete_flg'] = 0):
 					 ?>
-				 	<a href="like_do.php?delete=1&like_post_id=<?php echo h($post['id']); ?>"><i class="fas fa-heart like-btn"></i></a>
+					<a href="like_do.php?like_post_id=<?php echo h($post['id']); ?>">
+					<?php if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1): ?>
+						<i class="far fa-heart"></i></a>
 					<?php else: ?>
-					<a href="like_do.php?delete=0&like_post_id=<?php echo h($post['id']); ?>"><i class="far fa-heart"></i></a>
+						<i class="fas fa-heart like-btn"></i></a>
 					<?php endif; ?>
 
 					<a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>

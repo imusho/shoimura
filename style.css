@@ -148,3 +148,7 @@ li {
 .like-btn {
 	color: #CF3A60;
 }
+
+.like-link {
+	text-decoration: none;
+}

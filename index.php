@@ -128,18 +128,28 @@ function makeLink($value) {
 					$likeCheck = $likeChecks->fetch();
 					 ?>
 
-					<a href="like_do.php?like_post_id=<?php echo h($post['id']); ?>">
+					<a class="like-link" href="like_do.php?like_post_id=<?php echo h($post['id']); ?>">
 					<?php
 					//未いいねの場合の分岐
 					if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1):
 					 ?>
-						<i class="far fa-heart"></i></a>
+						<i class="far fa-heart"></i>
 					<?php
 					//いいね済の場合の分岐
 					else:
 					 ?>
-						<i class="fas fa-heart like-btn"></i></a>
+						<i class="fas fa-heart like-btn"></i>
 					<?php endif; ?>
+					[
+					<?php
+					//いいね数の取得
+					$likeCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM likes WHERE like_post_id=? AND delete_flg=0');
+					$likeCounts->execute(array($post['id']));
+					$likeCount = $likeCounts->fetch();
+
+					print($likeCount['cnt']);
+					 ?>
+				 	]</a>
 
 					<a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
 				<?php if ($post['reply_post_id'] > 0): ?>

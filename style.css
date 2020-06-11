@@ -152,3 +152,8 @@ li {
 .like-link {
 	text-decoration: none;
 }
+
+/* リツイート機能 */
+.rt-btn {
+	color: #59BB6D;
+}

@@ -151,6 +151,25 @@ function makeLink($value) {
 					 ?>
 				 	]</a>
 
+					<!-- リツイートボタン -->
+					<?php
+					//リツイートステータスチェック用のデータ取得
+					$rtChecks = $db->prepare('SELECT post_delete_flg FROM posts WHERE rt_post_id=? AND member_id=?');
+					$rtChecks->execute(array(
+							$post['id'],
+							$member['id']
+						));
+					$rtCheck = $rtChecks->fetch();
+				 	?>
+					<a href="rt_do.php?rt_post_id=<?php print(h($post['id'])); ?>">
+						<?php if(!isset($rtCheck['post_delete_flg']) || $rtCheck['post_delete_flg'] == 1): ?>
+							<i class="fas fa-retweet"></i>
+						<?php else: ?>
+							<i class="fas fa-retweet rt-btn"></i>
+						<?php endif; ?>
+					</a>
+
+
 					<a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
 				<?php if ($post['reply_post_id'] > 0): ?>
 					<a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>

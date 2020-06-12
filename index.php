@@ -18,14 +18,14 @@ if (isset($_SESSION['id']) && $_SESSION['time'] +3600 > time()) {
 if (!empty($_POST)) {
 	if ($_POST['message'] != '') {
 		if (!empty($_POST['reply_post_id'])) {
-			$message = $db->prepare('INSERT INTO posts SET message=?, member_id=?, reply_post_id=?, created=NOW()');
+			$message = $db->prepare('INSERT INTO posts SET message=?, member_id=?, reply_post_id=?, created=NOW(), rt_post_id=0, post_delete_flg=0');
 			$message->execute(array(
 				$_POST['message'],
 				$member['id'],
 				$_POST['reply_post_id']
 			));
 		} else {
-			$message = $db->prepare('INSERT INTO posts SET message=?, member_id=?, created=NOW()');
+			$message = $db->prepare('INSERT INTO posts SET message=?, member_id=?, created=NOW(), rt_post_id=0, post_delete_flg=0');
 			$message->execute(array(
 				$_POST['message'],
 				$member['id']
@@ -50,7 +50,7 @@ $page = min($page, $maxPage);
 
 $start = ($page-1) * 5;
 
-$posts = $db->prepare('SELECT p.*, m.name, m.picture FROM posts p, members m WHERE p.member_id=m.id ORDER BY p.created DESC LIMIT ?,5');
+$posts = $db->prepare('SELECT p.*, m.name, m.picture FROM posts p, members m WHERE p.member_id=m.id AND post_delete_flg=0 ORDER BY p.created DESC LIMIT ?,5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 

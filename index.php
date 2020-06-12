@@ -161,12 +161,23 @@ function makeLink($value) {
 						));
 					$rtCheck = $rtChecks->fetch();
 				 	?>
-					<a href="rt_do.php?rt_post_id=<?php print(h($post['id'])); ?>">
+					<a class="rt-link" href="rt_do.php?rt_post_id=<?php print(h($post['id'])); ?>">
 						<?php if(!isset($rtCheck['post_delete_flg']) || $rtCheck['post_delete_flg'] == 1): ?>
 							<i class="fas fa-retweet"></i>
 						<?php else: ?>
 							<i class="fas fa-retweet rt-btn"></i>
 						<?php endif; ?>
+
+						[
+						<?php
+						//リツイート数の取得
+						$rtCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM posts WHERE rt_post_id=? AND post_delete_flg=0');
+						$rtCounts->execute(array($post['id']));
+						$rtCount = $rtCounts->fetch();
+
+						print($rtCount['cnt']);
+						 ?>
+						]
 					</a>
 
 

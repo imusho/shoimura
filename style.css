@@ -157,3 +157,7 @@ li {
 .rt-btn {
 	color: #59BB6D;
 }
+
+.rt-link {
+	text-decoration: none;
+}

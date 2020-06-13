@@ -148,7 +148,6 @@ function makeLink($value) {
 								<?php else: ?>
 									<i class="fas fa-heart like-btn"></i>
 								<?php endif; ?>
-								[
 								<?php
 								//いいね数の取得
 								$likeCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM likes WHERE like_post_id=? AND delete_flg=0');
@@ -157,7 +156,6 @@ function makeLink($value) {
 
 								print($likeCount['cnt']);
 								?>
-								]
 							</a>
 
 							<!-- リツイートボタン -->
@@ -177,7 +175,6 @@ function makeLink($value) {
 									<i class="fas fa-retweet rt-btn"></i>
 								<?php endif; ?>
 
-								[
 								<?php
 								//リツイート数の取得
 								$rtCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM posts WHERE rt_post_id=? AND post_delete_flg=0');
@@ -186,7 +183,6 @@ function makeLink($value) {
 
 								print($rtCount['cnt']);
 								?>
-								]
 							</a>
 
 
@@ -229,7 +225,6 @@ function makeLink($value) {
 								<?php	else: ?>
 									<i class="fas fa-heart like-btn"></i>
 								<?php endif; ?>
-								[
 								<?php
 								//いいね数の取得
 								$likeCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM likes WHERE like_post_id=? AND delete_flg=0');
@@ -238,7 +233,6 @@ function makeLink($value) {
 
 								print($likeCount['cnt']);
 								?>
-								]
 							</a>
 
 							<!-- リツイートボタン -->
@@ -258,7 +252,6 @@ function makeLink($value) {
 									<i class="fas fa-retweet rt-btn"></i>
 								<?php endif; ?>
 
-								[
 								<?php
 								//リツイート数の取得
 								$rtCounts = $db->prepare('SELECT COUNT(*) AS cnt FROM posts WHERE rt_post_id=? AND post_delete_flg=0');
@@ -267,7 +260,6 @@ function makeLink($value) {
 
 								print($rtCount['cnt']);
 								?>
-								]
 							</a>
 
 

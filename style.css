@@ -127,19 +127,21 @@ li {
 }
 
 .msg {
-	clear: both;
+	/* clear: both; */
+	display: flex;
 	border-top: 1px solid #ccc;
 	padding: 10px 0;
 }
 .msg img {
-	float: left;
+	/* float: left; */
 	margin-right: 5px;
 }
 .msg p {
 	margin: 0;
 }
 .msg .day,
-.msg .day a {
+.msg .day a,
+.rt-message {
 	font-size: 80%;
 	color: #999;
 }

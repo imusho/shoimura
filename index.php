@@ -36,8 +36,9 @@ if (!empty($_POST)) {
 }
 
 //投稿を取得する
-$page = $_GET['page'];
-if ($page == '') {
+if (isset($_GET['page'])) {
+	$page = $_GET['page'];
+} else {
 	$page = 1;
 }
 $page = max($page, 1);
@@ -100,7 +101,7 @@ function makeLink($value) {
 			<dl>
 				<dt><?php print(h($member['name'])); ?>さんメッセージをどうぞ</dt>
 				<dd>
-					<textarea name="message" rows="5" cols="50"><?php echo h($message); ?></textarea>
+					<textarea name="message" rows="5" cols="50"><?php if(isset($message)) {echo h($message);} ?></textarea>
 					<input type="hidden" name="reply_post_id" value="<?php echo h($_GET['res']); ?>">
 				</dd>
 			</dl>

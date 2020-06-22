@@ -26,10 +26,10 @@ if (isset($_SESSION['id'])) {
     ));
   } else {
     //今までに押したことがあり、現在は未リツイートの時
-    if ($check['post_delete_flg'] == 1) {
+    if (intval($check['post_delete_flg']) === 1) {
       $record = $db->prepare('UPDATE posts SET post_delete_flg=0, created=NOW() WHERE member_id=? AND rt_post_id=?');
 
-    } elseif ($check['post_delete_flg'] == 0) {
+    } elseif (intval($check['post_delete_flg']) === 0) {
       $record = $db->prepare('UPDATE posts SET post_delete_flg=1 WHERE member_id=? AND rt_post_id=?');
     }
     $record->execute(array(

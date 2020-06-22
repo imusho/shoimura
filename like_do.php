@@ -19,14 +19,14 @@ if (!empty($_SESSION['id'])) {
       $_SESSION['id']
     ));
   } else {
-    if ($check_result['delete_flg'] == 1) {
+    if (intval($check_result['delete_flg']) === 1) {
       //いいねを今まで押したことがあるが現在は取り消されている時に、ボタンを押した時にいいねを記録する処理
       $record = $db->prepare('UPDATE likes SET delete_flg=0 WHERE like_post_id=? AND like_member_id=?');
       $record->execute(array(
         $_GET['like_post_id'],
         $_SESSION['id']
       ));
-    } elseif ($check_result['delete_flg'] == 0) {
+    } elseif (intval($check_result['delete_flg']) === 0) {
       //いいねを今まで押したことがあり現在もいいねされている時に、ボタンを押した時にいいねを取り消す処理
       $record = $db->prepare('UPDATE likes SET delete_flg=1 WHERE like_post_id=? AND like_member_id=?');
       $record->execute(array(

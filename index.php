@@ -17,7 +17,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] +3600 > time()) {
 //投稿を記録する
 if (!empty($_POST)) {
 	if ($_POST['message'] != '') {
-		if (!empty($_POST['reply_post_id'])) {
+		if (!isset($_POST['reply_post_id'])) {
 			$message = $db->prepare('INSERT INTO posts SET message=?, member_id=?, reply_post_id=?, created=NOW(), rt_post_id=0, post_delete_flg=0');
 			$message->execute(array(
 				$_POST['message'],
@@ -143,7 +143,7 @@ function makeLink($value) {
 
 							<a class="like-link" href="like_do.php?like_post_id=<?php echo h($rtPost['id']); ?>">
 								<!-- 未いいねの場合の分岐 -->
-								<?php if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1): ?>
+								<?php if (!isset($likeCheck['delete_flg']) || intval($likeCheck['delete_flg']) === 1): ?>
 									<i class="far fa-heart"></i>
 									<!-- いいね済の場合の分岐 -->
 								<?php else: ?>
@@ -170,7 +170,7 @@ function makeLink($value) {
 							$rtCheck = $rtChecks->fetch();
 							?>
 							<a class="rt-link" href="rt_do.php?rt_post_id=<?php print(h($rtPost['id'])); ?>">
-								<?php if(!isset($rtCheck['post_delete_flg']) || $rtCheck['post_delete_flg'] == 1): ?>
+								<?php if(!isset($rtCheck['post_delete_flg']) || intval($rtCheck['post_delete_flg']) === 1): ?>
 									<i class="fas fa-retweet"></i>
 								<?php else: ?>
 									<i class="fas fa-retweet rt-btn"></i>
@@ -191,7 +191,7 @@ function makeLink($value) {
 							<?php if ($rtPost['reply_post_id'] > 0): ?>
 								<a href="view.php?id=<?php echo h($rtPost['reply_post_id']); ?>">返信元のメッセージ</a>
 							<?php endif; ?>
-							<?php if ($_SESSION['id'] == $rtPost['member_id']): ?>
+							<?php if ($_SESSION['id'] === $rtPost['member_id']): ?>
 								[<a href="delete.php?id=<?php echo h($rtPost['id']); ?>" style="color: #F33;">削除</a>]
 							<?php endif; ?>
 						</p>
@@ -220,7 +220,7 @@ function makeLink($value) {
 
 							<a class="like-link" href="like_do.php?like_post_id=<?php echo h($post['id']); ?>">
 								<!-- 未いいねの場合の分岐 -->
-								<?php	if (!isset($likeCheck['delete_flg']) || $likeCheck['delete_flg'] == 1): ?>
+								<?php	if (!isset($likeCheck['delete_flg']) || intval($likeCheck['delete_flg']) === 1): ?>
 									<i class="far fa-heart"></i>
 									<!-- いいね済の場合の分岐 -->
 								<?php	else: ?>
@@ -247,7 +247,7 @@ function makeLink($value) {
 							$rtCheck = $rtChecks->fetch();
 							?>
 							<a class="rt-link" href="rt_do.php?rt_post_id=<?php print(h($post['id'])); ?>">
-								<?php if(!isset($rtCheck['post_delete_flg']) || $rtCheck['post_delete_flg'] == 1): ?>
+								<?php if(!isset($rtCheck['post_delete_flg']) || intval($rtCheck['post_delete_flg']) === 1): ?>
 									<i class="fas fa-retweet"></i>
 								<?php else: ?>
 									<i class="fas fa-retweet rt-btn"></i>
@@ -268,7 +268,7 @@ function makeLink($value) {
 							<?php if ($post['reply_post_id'] > 0): ?>
 								<a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
 							<?php endif; ?>
-							<?php if ($_SESSION['id'] == $post['member_id']): ?>
+							<?php if ($_SESSION['id'] === $post['member_id']): ?>
 								[<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color: #F33;">削除</a>]
 							<?php endif; ?>
 						</p>

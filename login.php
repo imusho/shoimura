@@ -22,7 +22,7 @@ if (!empty($_POST)) {
 			$_SESSION['id'] = $member['id'];
 			$_SESSION['time'] = time();
 
-			if ($_POST['save'] == 'on') {
+			if ($_POST['save'] === 'on') {
 				setcookie('email', $_POST['email'], time()+60*60*24);
 				setcookie('password', $_POST['password'], time()+60*60*24);
 			}
@@ -65,10 +65,10 @@ if (!empty($_POST)) {
 				<dt>メールアドレス</dt>
 				<dd>
 					<input type="text" name="email" size="35" maxlength="255" value="<?php if(isset($_POST['email'])) {echo htmlspecialchars($_POST['email'], ENT_QUOTES);} ?>">
-					<?php if (isset($error) && $error['login'] == 'blank'): ?>
+					<?php if (isset($error) && $error['login'] === 'blank'): ?>
 						<p class="error">* メールアドレスとパスワードをご記入ください。</p>
 					<?php endif; ?>
-					<?php if (isset($error) && $error['login'] == 'failed'): ?>
+					<?php if (isset($error) && $error['login'] === 'failed'): ?>
 						<p class="error">* ログインに失敗しました正しくご記入ください。</p>
 					<?php endif; ?>
 				</dd>

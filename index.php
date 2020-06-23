@@ -66,9 +66,9 @@ $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 
 //返信の場合
-if (isset($_GET['res'])) {
+if (isset($_GET['res_post_id'])) {
 	$response = $db->prepare('SELECT p.*, m.name FROM posts p, members m WHERE p.id=? AND p.member_id=m.id ORDER BY p.created DESC');
-	$response->execute(array($_GET['res']));
+	$response->execute(array($_GET['res_post_id']));
 
 	$table = $response->fetch();
 	$message = '@' . $table['name'] . ' ' . $table['message'];
@@ -112,7 +112,7 @@ function makeLink($value) {
 				<dt><?php print(h($member['name'])); ?>さんメッセージをどうぞ</dt>
 				<dd>
 					<textarea name="message" rows="5" cols="50"><?php if(isset($message)) {echo h($message);} ?></textarea>
-					<input type="hidden" name="reply_post_id" value="<?php echo h($_GET['res']); ?>">
+					<input type="hidden" name="reply_post_id" value="<?php echo h($_GET['res_post_id']); ?>">
 				</dd>
 			</dl>
 			<div>
@@ -137,7 +137,7 @@ function makeLink($value) {
 
 						<p class="rt-message"><i class="fas fa-retweet"></i><?php print($post['name']); ?>さんがリツイート</p>
 						<p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtPost['name']); ?>）</span>
-							[<a href="index.php?res=<?php echo h($rtPost['id']) ?>">Re</a>]</p>
+							[<a href="index.php?res_post_id=<?php echo h($rtPost['id']) ?>">Re</a>]</p>
 						<p class="day">
 
 							<!-- いいねボタン -->
@@ -214,7 +214,7 @@ function makeLink($value) {
 					<img src="member_picture/<?php echo h($post['picture']) ?>" alt="<?php echo h($post['name']) ?>のイメージ" width="48" height="48">
 					<div class="">
 						<p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
-							[<a href="index.php?res=<?php echo h($post['id']) ?>">Re</a>]</p>
+							[<a href="index.php?res_post_id=<?php echo h($post['id']) ?>">Re</a>]</p>
 						<p class="day">
 
 							<!-- いいねボタン -->

@@ -2,7 +2,12 @@
 session_start();
 require('dbconnect.php');
 
-if (isset($_SESSION['id']) && $_SESSION['time'] +3600 > time()) {
+//ログインしているかを確認する関数
+function isLogin() {
+	return isset($_SESSION['id']) && $_SESSION['time'] +3600 > time();
+}
+
+if (isLogin()) {
 	//ログインしている
 	$_SESSION['time'] = time();
 

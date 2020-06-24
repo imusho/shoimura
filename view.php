@@ -10,6 +10,7 @@ if (empty($_GET['id'])) {
 //投稿を取得する
 $posts = $db->prepare('SELECT p.*, m.name, m.picture FROM posts p, members m WHERE p.member_id=m.id AND p.id=? ORDER BY p.created DESC');
 $posts->execute(array($_GET['id']));
+$post = $posts->fetch();
  ?>
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ $posts->execute(array($_GET['id']));
   </div>
   <div id="content">
 		<p>&laquo;<a href="index.php">一覧に戻る</a></p>
-		<?php if ($post = $posts->fetch()): ?>
+		<?php if ($post): ?>
 			<div class="msg">
 				<img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES) ?>" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES) ?>のイメージ" width="48" height="48">
 				<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?><span class="name">（<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>）</span></p>

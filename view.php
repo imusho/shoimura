@@ -4,6 +4,7 @@ require('dbconnect.php');
 
 if (empty($_GET['id'])) {
 	header('Location: index.php');
+	exit();
 }
 
 //投稿を取得する

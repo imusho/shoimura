@@ -11,9 +11,17 @@ if (isset($_SESSION['id'])) {
 	$message = $messages->fetch();
 
 	if ($message['member_id'] === $_SESSION['id']) {
+
+		$db->beginTransaction();
 		//削除する
 		$del = $db->prepare('DELETE FROM posts WHERE id=?');
 		$del->execute(array($id));
+
+		//リツイートを削除する
+		$del_rt = $db->prepare('DELETE FROM posts WHERE rt_post_id=?');
+		$del_rt->execute(array($id));
+
+		$db->commit();
 	}
 }
 

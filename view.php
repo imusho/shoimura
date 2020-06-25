@@ -34,7 +34,10 @@ $post = $posts->fetch();
 		<?php if ($post): ?>
 			<div class="msg">
 				<img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES) ?>" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES) ?>のイメージ" width="48" height="48">
-				<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?><span class="name">（<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>）</span></p>
+				<p>
+					<?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?>
+					<span class="name">（<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>）</span>
+				</p>
 				<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
 			</div>
 		<?php else: ?>
